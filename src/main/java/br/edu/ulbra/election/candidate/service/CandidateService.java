@@ -1,15 +1,18 @@
 package br.edu.ulbra.election.candidate.service;
+
 import br.edu.ulbra.election.candidate.exception.GenericOutputException;
 import br.edu.ulbra.election.candidate.input.v1.CandidateInput;
 import br.edu.ulbra.election.candidate.model.Candidate;
 import br.edu.ulbra.election.candidate.output.v1.GenericOutput;
 import br.edu.ulbra.election.candidate.output.v1.CandidateOutput;
 import br.edu.ulbra.election.candidate.repository.CandidateRepository;
+import br.edu.ulbra.election.candidate.validations.ValidateName;
 import org.apache.commons.lang.StringUtils;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 import java.lang.reflect.Type;
 import java.util.List;
@@ -95,6 +98,11 @@ public class CandidateService {
         if (StringUtils.isBlank(candidateInput.getName())){
             throw new GenericOutputException("Invalid name");
         }
+
+        if(!ValidateName.validateName(candidateInput.getName())){
+            throw new GenericOutputException("Invalid name");
+        }
+
         if (candidateInput.getPartyId() == null){
             throw new GenericOutputException("Invalid Party");
         }

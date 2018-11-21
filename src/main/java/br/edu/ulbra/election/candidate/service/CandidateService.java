@@ -79,8 +79,6 @@ public class CandidateService {
         return modelMapper.map(candidate, CandidateOutput.class);
     }
 
-
-
     public CandidateOutput update(Long candidateId, CandidateInput candidateInput) {
         if (candidateId == null){
             throw new GenericOutputException(MESSAGE_INVALID_ID);
@@ -109,6 +107,14 @@ public class CandidateService {
         Candidate candidate = candidateRepository.findById(candidateId).orElse(null);
         if (candidate == null){
             throw new GenericOutputException(MESSAGE_CANDIDATE_NOT_FOUND);
+        }
+
+        try {
+            electionClientService.getElectionValidateById(candidate.getElectionId());
+        } catch (FeignException e){
+            if (e.status() == 500) {
+                throw new GenericOutputException(MESSAGE_INVALID_ELECTION_ID);
+            }
         }
 
         candidateRepository.delete(candidate);

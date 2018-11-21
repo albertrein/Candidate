@@ -66,6 +66,21 @@ public class CandidateService {
         return modelMapper.map(candidate, CandidateOutput.class);
     }
 
+    public CandidateOutput getCandidateByElectionId(Long electionId){
+        if (electionId == null){
+            throw new GenericOutputException("Invalid Election id");
+        }
+
+        Candidate candidate = candidateRepository.findByElectionId(electionId);
+        if (candidate == null){
+            throw new GenericOutputException(MESSAGE_CANDIDATE_NOT_FOUND);
+        }
+
+        return modelMapper.map(candidate, CandidateOutput.class);
+    }
+
+
+
     public CandidateOutput update(Long candidateId, CandidateInput candidateInput) {
         if (candidateId == null){
             throw new GenericOutputException(MESSAGE_INVALID_ID);

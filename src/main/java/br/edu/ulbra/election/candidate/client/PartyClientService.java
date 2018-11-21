@@ -21,7 +21,7 @@ public class PartyClientService {
         return this.partyClient.getById(id);
     }
 
-    @FeignClient(value="party-service", url="http://localhost:8082")
+    @FeignClient(value="party-service", url="http://localhost:8083")
     private interface PartyClient {
 
         @GetMapping("/v1/party/{partyId}")

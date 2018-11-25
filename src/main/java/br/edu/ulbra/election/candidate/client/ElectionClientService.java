@@ -21,8 +21,8 @@ public class ElectionClientService {
         return this.electionClient.getById(id);
     }
 
-    public ElectionOutput getElectionValidateById(Long id){
-        return this.electionClient.getById(id);
+    public Long countVotesByElectionId(Long electionId){
+        return this.electionClient.countVotesByElectionId(electionId);
     }
 
     @FeignClient(value="election-service", url="http://localhost:8084")
@@ -31,7 +31,8 @@ public class ElectionClientService {
         @GetMapping("/v1/election/{electionId}")
         ElectionOutput getById(@PathVariable(name = "electionId") Long electionId);
 
-        @GetMapping("/v1/election/validate/{electionId}")
-        ElectionOutput getElectionValidateById(@PathVariable(name = "electionId") Long electionId);
+        @GetMapping("/v1/vote/getvote/{electionId}")
+        Long countVotesByElectionId(@PathVariable(name = "electionId") Long electionId);
+
     }
 }

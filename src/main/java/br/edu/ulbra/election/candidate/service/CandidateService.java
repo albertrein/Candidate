@@ -66,31 +66,18 @@ public class CandidateService {
         return modelMapper.map(candidate, CandidateOutput.class);
     }
 
-    public CandidateOutput getCandidateByElectionId(Long electionId){
-        if (electionId == null){
-            throw new GenericOutputException("Invalid Election id");
+    public Long getCountElectionById(Long electionId){
+        if(electionId == null){
+            throw new GenericOutputException("Invalid ElectionId");
         }
-
-        Candidate candidate = candidateRepository.findByElectionId(electionId);
-        if (candidate == null){
-            throw new GenericOutputException(MESSAGE_CANDIDATE_NOT_FOUND);
-        }
-
-        return modelMapper.map(candidate, CandidateOutput.class);
+        return candidateRepository.countByElectionId(electionId);
     }
 
-    public CandidateOutput getCandidateByNumberElection(Long numberElection){
-        if (numberElection == null){
-            throw new GenericOutputException("Invalid Election Number");
+    public Long getCandidateByCandidateNumber(Long candidateNumber){
+        if(candidateNumber == null){
+            throw new GenericOutputException("Invalid NumberCandidate");
         }
-
-        Candidate candidate = candidateRepository.findByNumberElection(numberElection);
-
-        if (candidate == null){
-            throw new GenericOutputException(MESSAGE_CANDIDATE_NOT_FOUND);
-        }
-
-        return modelMapper.map(candidate, CandidateOutput.class);
+        return candidateRepository.countByNumberElection(candidateNumber);
     }
 
     public CandidateOutput update(Long candidateId, CandidateInput candidateInput) {
@@ -104,6 +91,7 @@ public class CandidateService {
         if (candidate == null){
             throw new GenericOutputException(MESSAGE_CANDIDATE_NOT_FOUND);
         }
+        countVotesByElectionId(candidate.getElectionId());
 
         candidate.setElectionId(candidateInput.getElectionId());
         candidate.setNumberElection(candidateInput.getNumberElection());
@@ -122,15 +110,7 @@ public class CandidateService {
         if (candidate == null){
             throw new GenericOutputException(MESSAGE_CANDIDATE_NOT_FOUND);
         }
-
-        try {
-            electionClientService.getElectionValidateById(candidate.getElectionId());
-        } catch (FeignException e){
-            if (e.status() == 500) {
-                throw new GenericOutputException(MESSAGE_INVALID_ELECTION_ID);
-            }
-        }
-
+        countVotesByElectionId(candidate.getElectionId());
         candidateRepository.delete(candidate);
 
         return new GenericOutput("Candidate deleted");
@@ -177,6 +157,22 @@ public class CandidateService {
         }
     }
 
+    private void countVotesByElectionId(Long electionId){
+        //Validando se a eleição possui votos
+        try{
+            if(electionClientService.countVotesByElectionId(electionId) > 0){
+                throw new GenericOutputException("Invalid Operation. Election already have votes");
+            }
+        }catch (FeignException e) {
+            if (e.status() == 0) {
+                throw new GenericOutputException("Election not found");
+            }
+            if (e.status() == 500) {
+                throw new GenericOutputException("Invalid election Id");
+            }
+        }
+    }
+
     public CandidateOutput toCandidateOutput(Candidate candidate){
         CandidateOutput candidateOutput = modelMapper.map(candidate, CandidateOutput.class);
         ElectionOutput electionOutput = electionClientService.getById(candidate.getElectionId());
@@ -185,6 +181,5 @@ public class CandidateService {
         candidateOutput.setPartyOutput(partyOutput);
         return candidateOutput;
     }
-
 
 }

@@ -33,16 +33,16 @@ public class CandidateApi {
         return candidateService.getById(candidateId);
     }
 
-    @GetMapping("/{electionId}")
-    @ApiOperation(value = "Get candidate by ElectionId")
-    public CandidateOutput getCandidateByElectionId(@PathVariable Long electionId){
-        return candidateService.getCandidateByElectionId(electionId);
+    @GetMapping("/election/{electionId}")
+    @ApiOperation(value = "Get candidates count by election id")
+    public Long getCountElectionById(@PathVariable Long electionId){
+        return candidateService.getCountElectionById(electionId);
     }
 
-    @GetMapping("/election/{numberElection}")
-    @ApiOperation(value = "Get candidate by Number Candidate")
-    public CandidateOutput getCandidateByNumberElection(@PathVariable Long numberElection){
-        return candidateService.getCandidateByNumberElection(numberElection);
+    @GetMapping("/candidatenumber/{candidateNumber}")
+    @ApiOperation(value = "Get Count candidate by candidateNumber")
+    public Long getCandidateByCandidateNumber(@PathVariable Long candidateNumber){
+        return candidateService.getCandidateByCandidateNumber(candidateNumber);
     }
 
     @PostMapping("/")

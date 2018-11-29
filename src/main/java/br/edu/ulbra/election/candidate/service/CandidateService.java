@@ -73,11 +73,15 @@ public class CandidateService {
         return candidateRepository.countByElectionId(electionId);
     }
 
-    public Long getCandidateByCandidateNumber(Long candidateNumber){
+    public Long getCandidateIdByCandidateNumber(Long candidateNumber){
         if(candidateNumber == null){
             throw new GenericOutputException("Invalid NumberCandidate");
         }
-        return candidateRepository.countByNumberElection(candidateNumber);
+        Candidate candidate = candidateRepository.getCandidateByNumberElection(candidateNumber);
+        if(candidate != null){
+            return candidate.getId();
+        }
+        return null;
     }
 
     public CandidateOutput update(Long candidateId, CandidateInput candidateInput) {

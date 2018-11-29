@@ -41,8 +41,8 @@ public class CandidateApi {
 
     @GetMapping("/candidatenumber/{candidateNumber}")
     @ApiOperation(value = "Get Count candidate by candidateNumber")
-    public Long getCandidateByCandidateNumber(@PathVariable Long candidateNumber){
-        return candidateService.getCandidateByCandidateNumber(candidateNumber);
+    public Long getCandidateIdByCandidateNumber(@PathVariable Long candidateNumber){
+        return candidateService.getCandidateIdByCandidateNumber(candidateNumber);
     }
 
     @PostMapping("/")

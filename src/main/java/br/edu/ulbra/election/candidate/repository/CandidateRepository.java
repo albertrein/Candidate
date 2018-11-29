@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 public interface CandidateRepository extends CrudRepository<Candidate, Long> {
     Candidate findFirstByNumberElectionAndAndElectionId(Long numberElection, Long electionId);
     Long countByElectionId(Long electionId);
-    Long countByNumberElection(Long numberElection);
+    Candidate getCandidateByNumberElection(Long numberElection);
 }

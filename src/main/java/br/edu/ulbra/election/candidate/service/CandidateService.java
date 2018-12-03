@@ -10,6 +10,7 @@ import br.edu.ulbra.election.candidate.output.v1.ElectionOutput;
 import br.edu.ulbra.election.candidate.output.v1.GenericOutput;
 import br.edu.ulbra.election.candidate.output.v1.PartyOutput;
 import br.edu.ulbra.election.candidate.repository.CandidateRepository;
+import br.edu.ulbra.election.candidate.validations.ValidateName;
 import feign.FeignException;
 import org.apache.commons.lang.StringUtils;
 import org.modelmapper.ModelMapper;
@@ -147,8 +148,11 @@ public class CandidateService {
     }
 
     private void validateInput(CandidateInput candidateInput){
-        if (StringUtils.isBlank(candidateInput.getName()) || candidateInput.getName().trim().length() < 5 || !candidateInput.getName().trim().contains(" ")){
+        if (StringUtils.isBlank(candidateInput.getName()) || candidateInput.getName().trim().length() < 5 ){
             throw new GenericOutputException("Invalid name");
+        }
+        if(!ValidateName.validateName(candidateInput.getName())){
+            throw new GenericOutputException("Invalid name, must conatin a last name");
         }
         if (candidateInput.getNumberElection() == null){
             throw new GenericOutputException("Invalid Number Election");

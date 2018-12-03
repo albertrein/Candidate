@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8ccaf157-5655-47d0-aa80-9b8f4659f281" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/edu/ulbra/election/candidate/api/v1/CandidateApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/edu/ulbra/election/candidate/api/v1/CandidateApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/edu/ulbra/election/candidate/repository/CandidateRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/edu/ulbra/election/candidate/repository/CandidateRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/edu/ulbra/election/candidate/service/CandidateService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/edu/ulbra/election/candidate/service/CandidateService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/ulbra/election/candidate/api/v1/CandidateApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/ulbra/election/candidate/api/v1/CandidateApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/ulbra/election/candidate/repository/CandidateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/ulbra/election/candidate/repository/CandidateRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/ulbra/election/candidate/service/CandidateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/ulbra/election/candidate/service/CandidateService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -28,12 +23,12 @@
     <session id="978875106">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.25" value="2" />
-          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.3" value="4" />
           <entry key="project.open.time.4" value="3" />
-          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.50" value="2" />
           <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.53" value="1" />
@@ -41,8 +36,9 @@
           <entry key="project.open.time.58" value="3" />
           <entry key="project.open.time.59" value="1" />
           <entry key="project.open.time.65" value="1" />
+          <entry key="project.open.time.74" value="1" />
           <entry key="project.open.time.77" value="1" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -50,7 +46,7 @@
           <entry key="gradle" value="6" />
           <entry key="gradlew" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="94" />
+          <entry key="java" value="99" />
           <entry key="sql" value="7" />
           <entry key="yaml" value="2" />
           <entry key="yml" value="9" />
@@ -60,7 +56,7 @@
         <counts>
           <entry key="Groovy" value="6" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="94" />
+          <entry key="JAVA" value="99" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="SQL" value="7" />
           <entry key="YAML" value="11" />
@@ -70,14 +66,14 @@
         <counts>
           <entry key="dummy" value="20" />
           <entry key="gradle" value="1" />
-          <entry key="java" value="790" />
+          <entry key="java" value="1068" />
           <entry key="yml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="1" />
-          <entry key="JAVA" value="790" />
+          <entry key="JAVA" value="1068" />
           <entry key="PLAIN_TEXT" value="20" />
           <entry key="YAML" value="4" />
         </counts>
@@ -133,26 +129,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/ulbra/election/candidate/service/CandidateService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="80" column="28" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
+            <state relative-caret-position="285">
+              <caret line="84" column="31" lean-forward="true" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/ulbra/election/candidate/input/v1/CandidateInput.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/ulbra/election/candidate/client/PartyClientService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/ulbra/election/candidate/repository/CandidateRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="210">
+              <caret line="23" column="29" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -570,6 +557,12 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="740" />
     <option name="y" value="25" />
@@ -581,7 +574,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -623,52 +615,7 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="candidate" type="462c0819:PsiDirectoryNode" />
-              <item name="v1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="candidate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Candidate" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="candidate" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="candidate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Candidate" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="candidate" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="candidate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Candidate" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="candidate" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="candidate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Candidate" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="candidate" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="candidate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Candidate" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="candidate" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="candidate" type="b2602c69:ProjectViewProjectNode" />
@@ -707,9 +654,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -738,6 +687,8 @@
     <configuration name="CandidateApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="candidate_main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="br.edu.ulbra.election.candidate.CandidateApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx128m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -779,12 +730,16 @@
       <workItem from="1543181158422" duration="371000" />
       <workItem from="1543370668025" duration="1208000" />
       <workItem from="1543436316274" duration="8206000" />
-      <workItem from="1543458908814" duration="1930000" />
+      <workItem from="1543458908814" duration="2195000" />
+      <workItem from="1543484893702" duration="3277000" />
+      <workItem from="1543544206072" duration="6000" />
+      <workItem from="1543763500427" duration="2691000" />
+      <workItem from="1543777542853" duration="2259000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72283000" />
+    <option name="totallyTimeSpent" value="80781000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -804,7 +759,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.37546194" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.29859573" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Spring" order="0" />
@@ -816,14 +771,14 @@
       <window_info anchor="bottom" id="Build" order="6" weight="0.32885906" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32885906" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" sideWeight="0.49963045" visible="true" weight="0.38926175" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49963045" visible="true" weight="0.38926175" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32885906" />
       <window_info anchor="bottom" id="TODO" order="14" weight="0.32751676" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="right" id="Maven Projects" order="1" />
+      <window_info anchor="right" id="Maven Projects" order="1" weight="0.32874617" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
@@ -840,24 +795,26 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.63761467" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.29859573" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" weight="0.32885906" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50036955" side_tool="true" weight="0.38926175" />
       <window_info anchor="bottom" id="Messages" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" order="6" weight="0.32885906" />
       <window_info anchor="bottom" id="Message" order="7" />
-      <window_info anchor="bottom" id="Find" order="8" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.32885906" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32885906" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49963045" weight="0.38926175" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="13" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32885906" />
+      <window_info anchor="bottom" id="TODO" order="14" weight="0.32751676" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="right" id="Maven Projects" order="1" />
+      <window_info anchor="right" id="Maven Projects" order="1" weight="0.32874617" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
@@ -957,13 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/ulbra/election/candidate/client/PartyClientService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/ulbra/election/candidate/config/ModelMapperConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1006,6 +956,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/ulbra/election/candidate/input/v1/CandidateInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/ulbra/election/candidate/repository/CandidateRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/ulbra/election/candidate/output/v1/CandidateOutput.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1026,24 +990,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/ulbra/election/candidate/repository/CandidateRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/ulbra/election/candidate/client/PartyClientService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/ulbra/election/candidate/input/v1/CandidateInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="210">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/ulbra/election/candidate/service/CandidateService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="80" column="28" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
+        <state relative-caret-position="285">
+          <caret line="84" column="31" lean-forward="true" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="31" />
         </state>
       </provider>
     </entry>

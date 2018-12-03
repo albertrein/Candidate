@@ -59,11 +59,30 @@ public class CandidateService {
         }
 
         Candidate candidate = candidateRepository.findById(candidateId).orElse(null);
+
         if (candidate == null){
             throw new GenericOutputException(MESSAGE_CANDIDATE_NOT_FOUND);
         }
 
-        return modelMapper.map(candidate, CandidateOutput.class);
+        CandidateOutput candidateOutput = modelMapper.map(candidate, CandidateOutput.class);
+
+        //Getting party by party id
+        try{
+            PartyOutput partyOutput = partyClientService.getById(candidate.getPartyId());
+            if(partyOutput != null){
+                candidateOutput.setPartyOutput(partyOutput);
+            }
+        }catch (FeignException e){
+            if(e.status() == 0){
+                throw new GenericOutputException("Party not found");
+            }
+            if(e.status() == 500){
+                throw new GenericOutputException("Party invalid");
+            }
+        }
+
+
+        return candidateOutput;
     }
 
     public Long getCountElectionById(Long electionId){

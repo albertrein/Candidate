@@ -151,7 +151,7 @@ public class CandidateService {
         if (StringUtils.isBlank(candidateInput.getName()) || candidateInput.getName().trim().length() < 5 ){
             throw new GenericOutputException("Invalid name");
         }
-        if(!ValidateName.validateName(candidateInput.getName())){
+        if(!candidateInput.getName().trim().contains(" ")){
             throw new GenericOutputException("Invalid name, must conatin a last name");
         }
         if (candidateInput.getNumberElection() == null){
